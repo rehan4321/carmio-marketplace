@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "KaamConnect"
+description = "A modern marketplace connecting customers with trusted local and remote service professionals. Users can discover services, post jobs, compare offers, chat safely, and track work from one place."
+version = "1.0.0"
+id = "artifacts/kaamconnect"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23938
+
+[services.development]
+run = "pnpm --filter @workspace/kaamconnect run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/kaamconnect", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/kaamconnect/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23938"
+BASE_PATH = "/"

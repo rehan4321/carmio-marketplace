@@ -1,6 +1,6 @@
-# [Project name]
+# KaamConnect
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+KaamConnect is a responsive two-sided marketplace prototype connecting customers with trusted local and remote service professionals.
 
 ## Run & Operate
 
@@ -22,23 +22,31 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/kaamconnect/src/App.tsx` — route map and shared app composition
+- `artifacts/kaamconnect/src/components/AppShell.tsx` — responsive navigation and app chrome
+- `artifacts/kaamconnect/src/pages/Pages.tsx` — clickable marketplace, dashboard, admin, auth, and settings screens
+- `artifacts/kaamconnect/src/lib/mock-data.ts` — realistic prototype entities for workers, jobs, conversations, and categories
+- `artifacts/kaamconnect/src/index.css` — KaamConnect theme tokens, typography, texture, and reusable utility styles
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- The first release is a frontend-only prototype with local state and realistic dummy data so the complete product surface can be reviewed before backend contracts are finalized.
+- Wouter routes are used so every requested URL is directly previewable while keeping the app lightweight.
+- Customer and Worker views share one account shell and can be switched from the dashboard.
+- Payment surfaces show the 10% platform fee and safe payout language without handling card data.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+KaamConnect supports service discovery, job posting, applications and offers, worker profiles, job detail and status tracking, safe chat, earnings, settings, and admin operations. It represents both nearby in-person work and remote digital services.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- The user requested a polished, professional startup marketplace rather than a basic template.
+- Educational services should remain legitimate tutoring and homework help, never cheating.
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- The app is currently prototype-only; authentication, payments, storage, real-time messaging, moderation, and persistence still need production integrations before launch.
 
 ## Pointers
 
