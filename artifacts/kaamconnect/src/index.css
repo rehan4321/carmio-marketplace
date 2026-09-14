@@ -124,6 +124,55 @@
   .route-swipe { animation: route-swipe .35s cubic-bezier(.2,.8,.2,1) both; }
   .card-lift { transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
   .card-lift:hover { transform: translateY(-2px); border-color: hsl(var(--primary) / .34); box-shadow: 0 18px 42px hsl(150 16% 4% / .38); }
+  .map-surface {
+    position: relative;
+    overflow: hidden;
+    background-color: hsl(150 12% 9%);
+    background-image:
+      linear-gradient(32deg, transparent 0 42%, hsl(var(--foreground) / .08) 42.4% 43%, transparent 43.4% 100%),
+      linear-gradient(148deg, transparent 0 50%, hsl(var(--foreground) / .06) 50.4% 51%, transparent 51.4% 100%),
+      linear-gradient(90deg, hsl(var(--foreground) / .045) 1px, transparent 1px),
+      linear-gradient(hsl(var(--foreground) / .045) 1px, transparent 1px);
+    background-size: 190px 155px, 240px 190px, 46px 46px, 46px 46px;
+  }
+  .map-surface::before,
+  .map-surface::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    border: 1px solid hsl(var(--foreground) / .07);
+    transform: rotate(-17deg);
+  }
+  .map-surface::before { inset: 18% 11% 22% 13%; }
+  .map-surface::after { inset: 10% 34% 17% 39%; transform: rotate(28deg); }
+  .map-pin {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid hsl(var(--primary) / .8);
+    border-radius: 999px 999px 999px 4px;
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    box-shadow: 0 0 0 7px hsl(var(--primary) / .12), 0 8px 18px hsl(150 16% 4% / .35);
+    transform: rotate(-45deg);
+    transition: transform .22s ease, box-shadow .22s ease, opacity .22s ease;
+  }
+  .map-pin > * { transform: rotate(45deg); }
+  .map-pin:hover, .map-pin[data-selected='true'] { transform: rotate(-45deg) scale(1.14); box-shadow: 0 0 0 10px hsl(var(--primary) / .17), 0 10px 22px hsl(150 16% 4% / .4); }
+  .map-pin-muted { opacity: .58; }
+  .map-label {
+    position: absolute;
+    z-index: 1;
+    color: hsl(var(--foreground) / .5);
+    font-family: var(--app-font-mono);
+    font-size: 9px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+  .pin-pop { animation: pin-pop .35s cubic-bezier(.2,.8,.2,1) both; }
+  @keyframes pin-pop { from { opacity: 0; transform: rotate(-45deg) scale(.72); } to { opacity: 1; transform: rotate(-45deg) scale(1); } }
   @keyframes rise-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
   @keyframes route-swipe { from { opacity: 0; transform: translateX(8px); } to { opacity: 1; transform: translateX(0); } }
   .focus-ring:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 3px; }

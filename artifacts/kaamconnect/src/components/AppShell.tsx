@@ -54,8 +54,8 @@ export function PageIntro({ eyebrow, title, description, action }: { eyebrow: st
   return <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"><div><p className="mono mb-2 text-[10px] font-bold uppercase tracking-[.2em] text-[hsl(var(--primary))]">{eyebrow}</p><h1 className="display-font max-w-3xl text-3xl font-bold leading-[1.05] sm:text-5xl">{title}</h1>{description && <p className="mt-3 max-w-2xl text-sm leading-6 text-[hsl(var(--muted-foreground))]">{description}</p>}</div>{action}</div>;
 }
 
-export function Avatar({ initials, color = 'bg-[hsl(var(--primary))]', size = 'md' }: { initials: string; color?: string; size?: 'sm' | 'md' | 'lg' }) {
-  return <span className={`grid shrink-0 place-items-center rounded-full font-bold text-[hsl(var(--primary-foreground))] ${color} ${size === 'sm' ? 'h-8 w-8 text-[10px]' : size === 'lg' ? 'h-16 w-16 text-lg' : 'h-11 w-11 text-xs'}`}>{initials}</span>;
+export function Avatar({ initials, color = 'bg-[hsl(var(--primary))]', size = 'md', photo }: { initials: string; color?: string; size?: 'sm' | 'md' | 'lg'; photo?: string }) {
+  return <span className={`relative grid shrink-0 place-items-center overflow-hidden rounded-full font-bold text-[hsl(var(--primary-foreground))] ${color} ${size === 'sm' ? 'h-8 w-8 text-[10px]' : size === 'lg' ? 'h-16 w-16 text-lg' : 'h-11 w-11 text-xs'}`}>{photo ? <img src={photo} alt="" className="absolute inset-0 h-full w-full object-cover grayscale" /> : initials}</span>;
 }
 
 export function Badge({ children, tone = 'neutral' }: { children: ReactNode; tone?: 'neutral' | 'green' | 'yellow' | 'coral' }) {
