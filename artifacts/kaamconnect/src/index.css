@@ -36,70 +36,70 @@
 }
 
 :root {
-  --background: 42 43% 96%;
-  --foreground: 198 30% 16%;
-  --border: 42 22% 84%;
-  --input: 42 22% 84%;
-  --ring: 167 65% 34%;
-  --card: 42 36% 98%;
-  --card-foreground: 198 30% 16%;
-  --card-border: 42 22% 87%;
-  --popover: 42 36% 98%;
-  --popover-foreground: 198 30% 16%;
-  --popover-border: 42 22% 87%;
-  --primary: 167 65% 32%;
-  --primary-foreground: 42 43% 96%;
-  --secondary: 39 100% 69%;
-  --secondary-foreground: 198 30% 16%;
-  --muted: 39 25% 91%;
-  --muted-foreground: 198 14% 43%;
-  --accent: 11 82% 61%;
-  --accent-foreground: 42 43% 96%;
-  --destructive: 2 67% 46%;
-  --destructive-foreground: 42 43% 96%;
-  --sidebar: 192 32% 18%;
-  --sidebar-foreground: 42 43% 96%;
-  --sidebar-border: 192 25% 28%;
-  --sidebar-primary: 39 100% 69%;
-  --sidebar-primary-foreground: 198 30% 16%;
-  --sidebar-accent: 192 25% 26%;
-  --sidebar-accent-foreground: 42 43% 96%;
-  --sidebar-ring: 39 100% 69%;
+  --background: 150 10% 6%;
+  --foreground: 120 20% 96%;
+  --border: 145 12% 22%;
+  --input: 145 12% 22%;
+  --ring: 125 72% 58%;
+  --card: 150 9% 10%;
+  --card-foreground: 120 20% 96%;
+  --card-border: 145 12% 20%;
+  --popover: 150 9% 10%;
+  --popover-foreground: 120 20% 96%;
+  --popover-border: 145 12% 20%;
+  --primary: 125 72% 58%;
+  --primary-foreground: 150 16% 6%;
+  --secondary: 135 48% 27%;
+  --secondary-foreground: 120 20% 96%;
+  --muted: 145 12% 15%;
+  --muted-foreground: 130 10% 65%;
+  --accent: 125 72% 58%;
+  --accent-foreground: 150 16% 6%;
+  --destructive: 135 48% 27%;
+  --destructive-foreground: 120 20% 96%;
+  --sidebar: 150 16% 4%;
+  --sidebar-foreground: 120 20% 96%;
+  --sidebar-border: 145 12% 17%;
+  --sidebar-primary: 125 72% 58%;
+  --sidebar-primary-foreground: 150 16% 6%;
+  --sidebar-accent: 145 14% 11%;
+  --sidebar-accent-foreground: 120 20% 96%;
+  --sidebar-ring: 125 72% 58%;
   --app-font-sans: 'DM Sans', sans-serif;
   --app-font-mono: 'Space Mono', monospace;
   --radius: 0.8rem;
 }
 
 .dark {
-  --background: 198 30% 10%;
-  --foreground: 42 43% 96%;
-  --border: 192 25% 28%;
-  --input: 192 25% 28%;
-  --ring: 39 100% 69%;
-  --card: 198 28% 14%;
-  --card-foreground: 42 43% 96%;
-  --card-border: 192 25% 28%;
-  --popover: 198 28% 14%;
-  --popover-foreground: 42 43% 96%;
-  --popover-border: 192 25% 28%;
-  --primary: 39 100% 69%;
-  --primary-foreground: 198 30% 10%;
-  --secondary: 167 55% 38%;
-  --secondary-foreground: 42 43% 96%;
-  --muted: 192 21% 21%;
-  --muted-foreground: 42 18% 70%;
-  --accent: 11 82% 61%;
-  --accent-foreground: 42 43% 96%;
-  --destructive: 2 67% 56%;
-  --destructive-foreground: 42 43% 96%;
-  --sidebar: 198 31% 8%;
-  --sidebar-foreground: 42 43% 96%;
-  --sidebar-border: 192 25% 22%;
-  --sidebar-primary: 39 100% 69%;
-  --sidebar-primary-foreground: 198 30% 10%;
-  --sidebar-accent: 192 25% 19%;
-  --sidebar-accent-foreground: 42 43% 96%;
-  --sidebar-ring: 39 100% 69%;
+  --background: 150 10% 6%;
+  --foreground: 120 20% 96%;
+  --border: 145 12% 22%;
+  --input: 145 12% 22%;
+  --ring: 125 72% 58%;
+  --card: 150 9% 10%;
+  --card-foreground: 120 20% 96%;
+  --card-border: 145 12% 20%;
+  --popover: 150 9% 10%;
+  --popover-foreground: 120 20% 96%;
+  --popover-border: 145 12% 20%;
+  --primary: 125 72% 58%;
+  --primary-foreground: 150 16% 6%;
+  --secondary: 135 48% 27%;
+  --secondary-foreground: 120 20% 96%;
+  --muted: 145 12% 15%;
+  --muted-foreground: 130 10% 65%;
+  --accent: 125 72% 58%;
+  --accent-foreground: 150 16% 6%;
+  --destructive: 135 48% 27%;
+  --destructive-foreground: 120 20% 96%;
+  --sidebar: 150 16% 4%;
+  --sidebar-foreground: 120 20% 96%;
+  --sidebar-border: 145 12% 17%;
+  --sidebar-primary: 125 72% 58%;
+  --sidebar-primary-foreground: 150 16% 6%;
+  --sidebar-accent: 145 14% 11%;
+  --sidebar-accent-foreground: 120 20% 96%;
+  --sidebar-ring: 125 72% 58%;
 }
 
 @layer base {
@@ -107,6 +107,7 @@
   body { @apply font-sans antialiased bg-background text-foreground; }
   h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.035em; }
   button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+  :where(button, a, input, select, textarea):focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 3px; }
 }
 
 @layer utilities {
@@ -114,11 +115,19 @@
   .display-font { font-family: 'Space Grotesk', sans-serif; }
   .mono { font-family: var(--app-font-mono); }
   .paper-grid {
-    background-image: linear-gradient(hsl(42 22% 84% / .35) 1px, transparent 1px), linear-gradient(90deg, hsl(42 22% 84% / .35) 1px, transparent 1px);
+    background-image: linear-gradient(hsl(125 72% 58% / .08) 1px, transparent 1px), linear-gradient(90deg, hsl(125 72% 58% / .08) 1px, transparent 1px);
     background-size: 28px 28px;
   }
   .noise::after { content: ''; pointer-events: none; position: fixed; inset: 0; opacity: .035; z-index: 50; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E"); }
   .rise-in { animation: rise-in .5s cubic-bezier(.2,.8,.2,1) both; }
   .rise-in-delay { animation: rise-in .5s .1s cubic-bezier(.2,.8,.2,1) both; }
+  .route-swipe { animation: route-swipe .35s cubic-bezier(.2,.8,.2,1) both; }
+  .card-lift { transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+  .card-lift:hover { transform: translateY(-2px); border-color: hsl(var(--primary) / .34); box-shadow: 0 18px 42px hsl(150 16% 4% / .38); }
   @keyframes rise-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes route-swipe { from { opacity: 0; transform: translateX(8px); } to { opacity: 1; transform: translateX(0); } }
+  .focus-ring:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+  }
 }

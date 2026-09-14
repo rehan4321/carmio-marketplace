@@ -1,6 +1,6 @@
-# KaamConnect
+# Carmio
 
-KaamConnect is a responsive two-sided marketplace prototype connecting customers with trusted local and remote service professionals.
+Carmio is a responsive two-sided marketplace prototype connecting customers with trusted local and remote service professionals.
 
 ## Run & Operate
 
@@ -26,7 +26,7 @@ KaamConnect is a responsive two-sided marketplace prototype connecting customers
 - `artifacts/kaamconnect/src/components/AppShell.tsx` — responsive navigation and app chrome
 - `artifacts/kaamconnect/src/pages/Pages.tsx` — clickable marketplace, dashboard, admin, auth, and settings screens
 - `artifacts/kaamconnect/src/lib/mock-data.ts` — realistic prototype entities for workers, jobs, conversations, and categories
-- `artifacts/kaamconnect/src/index.css` — KaamConnect theme tokens, typography, texture, and reusable utility styles
+- `artifacts/kaamconnect/src/index.css` — Carmio theme tokens, typography, texture, and reusable utility styles
 
 ## Architecture decisions
 
@@ -37,7 +37,7 @@ KaamConnect is a responsive two-sided marketplace prototype connecting customers
 
 ## Product
 
-KaamConnect supports service discovery, job posting, applications and offers, worker profiles, job detail and status tracking, safe chat, earnings, settings, and admin operations. It represents both nearby in-person work and remote digital services.
+Carmio supports service discovery, job posting, applications and offers, worker profiles, job detail and status tracking, safe chat, earnings, settings, and admin operations. It represents both nearby in-person work and remote digital services.
 
 ## User preferences
 
